@@ -76,9 +76,12 @@ def solve_logistics_route():
                     # The Depot (0) doesn't have a 'u' variable in our optimized range
                     step_order = value(u[next_node]) if next_node in u else 0
                     
-                    label = "DEPOT" if next_node == 0 else f"Node {next_node:2}"
-                    print(f"Step {visited_nodes + 1:2}: From {curr_node:2} ---> To {next_node:2} | {label} | Order: {step_order:.0f}")
+                    # label = "DEPOT" if next_node == 0 else f"Node {next_node:2}"
+                    # print(f"Step {visited_nodes + 1:2}: From {curr_node:2} ---> To {next_node:2} | {label} | Order: {step_order:.0f}")
                     
+                    location_label = df.iloc[next_node]['location_name']
+                    print(f"Step {visited_nodes + 1:2}: From {curr_node:2} ---> To {next_node:2} | {location_label}")
+
                     # 4. Move to the next node and mark as found
                     curr_node = next_node
                     visited_nodes += 1
