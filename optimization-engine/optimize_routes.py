@@ -3,10 +3,12 @@ import numpy as np
 from pulp import *
 from visualize_route import generate_route_map
 
-def solve_logistics_route(csv_path='medellin_customers.csv', timeLimit=600, gap_rel=0.15):
+def solve_logistics_route(csv_path='data/medellin_customers.csv',
+                          matrix_path='data/distance_matrix.npy',
+                          timeLimit=600, gap_rel=0.15):
     # 1. Load Data
     df = pd.read_csv(csv_path)
-    dist_matrix = np.load('distance_matrix.npy')
+    dist_matrix = np.load(matrix_path)
     n = len(df) # Should be 51
     
     # 2. Define the Optimization Problem
@@ -106,6 +108,6 @@ def solve_logistics_route(csv_path='medellin_customers.csv', timeLimit=600, gap_
 
 
 if __name__ == "__main__":
-    df = pd.read_csv('medellin_customers.csv')
+    df = pd.read_csv('data/medellin_customers.csv')
     sequence, distance = solve_logistics_route()
     generate_route_map(df, sequence)
