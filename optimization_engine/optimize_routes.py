@@ -1,7 +1,6 @@
 import pandas as pd
 import numpy as np
 from pulp import *
-from visualize_route import generate_route_map
 
 def solve_logistics_route(csv_path='data/medellin_customers.csv',
                           matrix_path='data/distance_matrix.npy',
@@ -108,6 +107,7 @@ def solve_logistics_route(csv_path='data/medellin_customers.csv',
 
 
 if __name__ == "__main__":
+    from visualize_route import generate_route_map
     df = pd.read_csv('data/medellin_customers.csv')
     sequence, distance = solve_logistics_route()
     generate_route_map(df, sequence)
