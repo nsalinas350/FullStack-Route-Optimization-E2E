@@ -1,4 +1,5 @@
-# LogiSmart Optimizer 🚚💨
+# 🚀 PyOptimizer: E2E Linear Programming Route Solver
+**Full-Stack Optimization System for Medellín Logistics**
 
 ### End-to-End Logistics Optimization Platform
 This project is a Fullstack application designed to solve the **Vehicle Routing Problem (VRP)** using mathematical optimization and modern web technologies. It focuses on reducing operational costs and improving resource allocation for logistics fleets.
