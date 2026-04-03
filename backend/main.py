@@ -10,9 +10,19 @@ import pandas as pd
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from optimization_engine.optimize_routes import solve_logistics_route
 from optimization_engine.visualize_route import generate_route_map
+from fastapi.middleware.cors import CORSMiddleware
+
 
 
 app = FastAPI(title="Logismart API")
+
+# To connect to the frontend
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Create the output folder, if not exitst
 if not os.path.exists("outputs"):
