@@ -23,4 +23,4 @@ By combining **Operations Research** with **Software Engineering**, this tool ai
 3. Provide data-driven insights for strategic decision-making.
 
 ---
-*Developed by Nelson Andrés Salinas Zapata - Systems Engineer (Candidate) at Universidad Nacional de Colombia.*
+*Developed by Nelson Andrés Salinas Zapata - Systems Engineer at Universidad Nacional de Colombia.*
